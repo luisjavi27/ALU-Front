@@ -1,0 +1,77 @@
+<div class="container-fluid" id="main">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center titulo" >
+				Tu cuenta
+			</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card">
+						
+						<div class="card-body">
+							<p class="card-text">
+								Usuario: {{datosCuenta.correo}}
+							</p>
+						</div>
+						<div class="card-footer">
+							Saldo actual: ${{datosCuenta.saldo}}
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					 
+					<div class="input-group mb-3">
+                        <input type="number" class="form-control" [(ngModel)]= "montoAbono" placeholder="Abono" aria-label="Abono" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-success" (click)="hacerAbono(idUsuario, montoAbono)" type="button" id="boton-enviar-abono">Enviar</button>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" [(ngModel)]= "montoRetiro"  placeholder="Retiro" aria-label="Retiro" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-warning" (click)="hacerRetiro(idUsuario, montoRetiro) " type="button" id="boton-enviar-retiro">Enviar</button>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="text-center titulo">
+						Historico de movimientos
+					</h3>
+					<table class="table table-sm table-striped">
+						<thead>
+							<tr>
+								<th class="text-center">
+									#
+								</th>
+								<th class="text-center">
+									Fecha
+								</th>
+								<th class="text-center">
+									Saldo anterior
+								</th>
+								<th class="text-center">
+									Saldo nuevo
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="table-active text-center" *ngFor="let movimiento of historico; let i = index">
+								<td>
+									{{i+1}}
+								</td>
+								<td>
+									{{movimiento.timemovimiento}}
+								</td>
+								<td>
+									${{movimiento.saldoanterior}}
+								</td>
+								<td>
+									${{movimiento.saldonuevo}}
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+.contenedor{
+    padding: 10vh 10vh;
+    
+    
+}
+
+.borde{
+    border-right: 2px solid;
+    border-color: blue;
+   
+}
+.form-group{
+
+    margin-top: 3vh; 
+    width: 80%;
+}
+.titulo{
+    margin-bottom: 8vh; 
+}
