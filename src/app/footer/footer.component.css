@@ -1,0 +1,18 @@
+footer {
+    background-color: #A0D5E7;
+    color: #295969;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /* margin-top: 20px; */
+   
+}
+footer p {
+    font-size: 18px;
+    margin: 0;
+}

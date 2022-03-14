@@ -10,6 +10,7 @@ import { FormularioIngresoComponent } from './formulario-ingreso/formulario-ingr
 import { CuentaComponent } from './cuenta/cuenta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     HeaderComponent,
     FormularioIngresoComponent,
-    CuentaComponent
+    CuentaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
