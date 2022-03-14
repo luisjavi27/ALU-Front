@@ -4,7 +4,8 @@ import {CuentaComponent} from './cuenta/cuenta.component'
 import { FormularioIngresoComponent } from './formulario-ingreso/formulario-ingreso.component';
 const routes: Routes = [
  {path:'cuenta/:id', component:CuentaComponent },
- {path:'login', component:FormularioIngresoComponent}
+ {path:'login', component:FormularioIngresoComponent},
+ {path:'**', redirectTo:'login'}
 ];
 
 @NgModule({
